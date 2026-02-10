@@ -31,16 +31,21 @@ nav {
     padding: 30px;
     border-radius: 0px 0px 10px 10px;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav li {
     text-decoration: none;
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
 }
 
 .lien {
     text-decoration: none;
     color: black;
     margin: 10px;
+    display: inline-block;
 }
 
 .hero {
@@ -80,8 +85,9 @@ nav li {
 .section, .sect {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .appropos {
@@ -93,10 +99,14 @@ nav li {
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
+    flex: 1 1 100%;
+    min-width: 250px;
 }
 
 .appropos img {
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 form {
@@ -167,13 +177,19 @@ footer a {
         margin-left: 2%;
     }
 
+    .section, .sect {
+        gap: 20px;
+    }
+
     .appropos {
         width: 45%;
-        margin-left: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        flex: 1 1 calc(50% - 10px);
     }
 
     .lien {
-        margin: 130px;
+        margin: 10px 20px;
     }
 
     form {
@@ -183,15 +199,15 @@ footer a {
     }
 
     label {
-        width: 50%;
+        width: 100%;
     }
 
     input, textarea {
-        width: 80%;
+        width: 100%;
     }
 
     button {
-        width: 80%;
+        width: 100%;
     }
 }
 
@@ -202,12 +218,19 @@ footer a {
         margin-left: 20%;
     }
 
+    .section, .sect {
+        gap: 20px;
+    }
+
     .appropos {
-        width: 30%;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        flex: 1 1 calc(25% - 15px);
     }
 
     .lien {
-        margin: 130px;
+        margin: 10px 20px;
     }
 
     form {
@@ -216,18 +239,18 @@ footer a {
     }
 
     label {
-        width: 50%;
-        margin-left: 20px;
+        width: 100%;
+        margin-left: 0;
     }
 
     input, textarea {
-        width: 50%;
-        margin-left: 10%;
+        width: 100%;
+        margin-left: 0;
     }
 
     button {
-        width: 50%;
-        margin-left: 18%;
+        width: 100%;
+        margin-left: 0;
     }
 }
 
@@ -253,6 +276,12 @@ footer a {
         margin-left: auto;
         margin-right: auto;
         padding: 15px;
+        flex: 1 1 100%;
+    }
+
+    .section, .sect {
+        flex-direction: column;
+        gap: 15px;
     }
 
     form {
